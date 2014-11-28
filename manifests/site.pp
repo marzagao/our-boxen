@@ -8,9 +8,9 @@ Exec {
   user        => $boxen_user,
 
   path => [
-    "${boxen::config::home}/rbenv/shims",
-    "${boxen::config::home}/rbenv/bin",
-    "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
+#    "${boxen::config::home}/rbenv/shims",
+#    "${boxen::config::home}/rbenv/bin",
+#    "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
     "${boxen::config::home}/homebrew/bin",
     '/usr/bin',
     '/bin',
@@ -56,24 +56,24 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
+  #include nginx
 
   # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
+  #if $::root_encrypted == 'no' {
+  #  fail('Please enable full disk encryption and try again')
+  #}
 
   # node versions
-  include nodejs::v0_6
-  include nodejs::v0_8
-  include nodejs::v0_10
+  #include nodejs::v0_6
+  #include nodejs::v0_8
+  #include nodejs::v0_10
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
-  ruby::version { '2.1.2': }
+  #ruby::version { '1.9.3': }
+  #ruby::version { '2.0.0': }
+  #ruby::version { '2.1.0': }
+  #ruby::version { '2.1.1': }
+  #ruby::version { '2.1.2': }
 
   # common, useful packages
   package {
