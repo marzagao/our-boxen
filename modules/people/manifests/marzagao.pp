@@ -3,6 +3,7 @@ class people::marzagao {
   include iterm2::stable
   include dockutil
   include dropbox
+  include evernote
 
   include virtualbox  
   class { 'vagrant': }
@@ -46,5 +47,11 @@ class people::marzagao {
     label    => "Telegram",
     action   => "add",
     position => 4,
+  }
+  dockutil::item { 'Add Evernote':
+    item     => "/Applications/Evernote.app",
+    label    => "Evernote",
+    action   => "add",
+    position => 5,
   }
 }

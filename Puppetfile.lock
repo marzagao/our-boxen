@@ -19,6 +19,11 @@ GITHUBTARBALL
     dropbox (1.4.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-evernote
+  specs:
+    evernote (2.0.7)
+
+GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (2.2.0)
@@ -120,6 +125,7 @@ DEPENDENCIES
   dnsmasq (= 2.0.0)
   dockutil (= 0.1.3)
   dropbox (= 1.4.1)
+  evernote (= 2.0.7)
   gcc (= 2.2.0)
   git (= 2.5.0)
   go (= 1.1.0)
