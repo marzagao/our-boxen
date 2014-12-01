@@ -3,7 +3,8 @@ class people::marzagao {
   include iterm2::stable
   include dockutil
   include dropbox
-  
+
+  include virtualbox  
   class { 'vagrant': }
   include vagrant_manager
 
@@ -11,6 +12,15 @@ class people::marzagao {
     [
       'gpg',
     ]:
+  }
+
+  package { 'Cyberduck':
+    provider   => 'compressed_app',
+    source     => 'https://update.cyberduck.io/Cyberduck-4.6.zip'
+  }
+
+  appstore::app { 'Telegram':
+    source => 'messenger-for-telegram/id747648890',
   }
 
   dockutil::item { 'Add Chrome':
@@ -24,5 +34,17 @@ class people::marzagao {
     label    => "iTerm",
     action   => "add",
     position => 2,
+  }
+  dockutil::item { 'Add Cyberduck':
+    item     => "/Applications/Cyberduck.app",
+    label    => "Cyberduck",
+    action   => "add",
+    position => 3,
+  }
+  dockutil::item { 'Add Telegram':
+    item     => "/Applications/Telegram.app",
+    label    => "Telegram",
+    action   => "add",
+    position => 4,
   }
 }

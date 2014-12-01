@@ -66,3 +66,6 @@ github "vagrant",     "3.2.0"
 github "vagrant_manager",     "0.0.1"
 github "dockutil",     "0.1.3", :repo => "grahamgilbert/puppet-dockutil"
 github "dropbox",     "1.4.1"
+github "virtualbox",     "1.0.13"
+github "appstore",     "0.0.6", :repo => "xdissent/puppet-appstore"
+

@@ -84,6 +84,11 @@ GITHUBTARBALL
     vagrant_manager (0.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.13)
+
+GITHUBTARBALL
   remote: grahamgilbert/puppet-dockutil
   specs:
     dockutil (0.1.3)
@@ -103,7 +108,13 @@ GITHUBTARBALL
   specs:
     module_data (0.0.3)
 
+GITHUBTARBALL
+  remote: xdissent/puppet-appstore
+  specs:
+    appstore (0.0.6)
+
 DEPENDENCIES
+  appstore (= 0.0.6)
   boxen (= 3.7.0)
   chrome (= 1.2.0)
   dnsmasq (= 2.0.0)
@@ -125,4 +136,5 @@ DEPENDENCIES
   sudo (= 1.0.0)
   vagrant (= 3.2.0)
   vagrant_manager (= 0.0.1)
+  virtualbox (= 1.0.13)
 
