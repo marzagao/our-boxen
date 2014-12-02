@@ -23,6 +23,10 @@ class people::marzagao {
   appstore::app { 'Telegram':
     source => 'messenger-for-telegram/id747648890',
   }
+  
+  appstore::app { 'Slack':
+    source => 'slack/id803453959',
+  }
 
   dockutil::item { 'Add Chrome':
     item     => "/Applications/Google Chrome.app",
@@ -48,10 +52,16 @@ class people::marzagao {
     action   => "add",
     position => 4,
   }
+  dockutil::item { 'Add Slack':
+    item     => "/Applications/Slack.app",
+    label    => "Slack",
+    action   => "add",
+    position => 5,
+  }
   dockutil::item { 'Add Evernote':
     item     => "/Applications/Evernote.app",
     label    => "Evernote",
     action   => "add",
-    position => 5,
+    position => 6,
   }
 }
