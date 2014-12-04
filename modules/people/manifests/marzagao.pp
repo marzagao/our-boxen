@@ -4,6 +4,7 @@ class people::marzagao {
   include dockutil
   include dropbox
   include evernote
+  include sublime_text_3
 
   include virtualbox  
   class { 'vagrant': }
@@ -12,7 +13,22 @@ class people::marzagao {
   package {
     [
       'gpg',
+      'go',
     ]:
+  }
+
+  sublime_text_3::package { 'GoSublime':
+    source => 'DisposaBoy/GoSublime'
+  }
+
+  file { "/usr/local/bin":
+    ensure => "directory",
+  }
+ 
+  file { '/usr/local/bin/sublime':
+   ensure => 'link',
+   target => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
+   require => File['/usr/local/bin'],
   }
 
   package { 'Cyberduck':
@@ -40,28 +56,34 @@ class people::marzagao {
     action   => "add",
     position => 2,
   }
+  dockutil::item { 'Add SublimeText':
+    item     => "/Applications/Sublime Text.app",
+    label    => "Sublime Text 3",
+    action   => "add",
+    position => 3,
+  }
   dockutil::item { 'Add Cyberduck':
     item     => "/Applications/Cyberduck.app",
     label    => "Cyberduck",
     action   => "add",
-    position => 3,
+    position => 4,
   }
   dockutil::item { 'Add Telegram':
     item     => "/Applications/Telegram.app",
     label    => "Telegram",
     action   => "add",
-    position => 4,
+    position => 5,
   }
   dockutil::item { 'Add Slack':
     item     => "/Applications/Slack.app",
     label    => "Slack",
     action   => "add",
-    position => 5,
+    position => 6,
   }
   dockutil::item { 'Add Evernote':
     item     => "/Applications/Evernote.app",
     label    => "Evernote",
     action   => "add",
-    position => 6,
+    position => 7,
   }
 }
