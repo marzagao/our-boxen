@@ -13,7 +13,9 @@ class people::marzagao {
   package {
     [
       'gpg',
+      'git-crypt',
       'go',
+      'hg',
     ]:
   }
 
@@ -58,7 +60,7 @@ class people::marzagao {
   }
   dockutil::item { 'Add SublimeText':
     item     => "/Applications/Sublime Text.app",
-    label    => "Sublime Text 3",
+    label    => "Sublime Text",
     action   => "add",
     position => 3,
   }
