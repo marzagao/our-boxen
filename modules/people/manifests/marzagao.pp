@@ -16,6 +16,8 @@ class people::marzagao {
       'git-crypt',
       'go',
       'hg',
+      'awscli',
+      'ec2-api-tools',
     ]:
   }
 
