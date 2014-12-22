@@ -5,6 +5,7 @@ class people::marzagao {
   include dropbox
   include evernote
   include sublime_text_3
+  include spotify
 
   include virtualbox  
   class { 'vagrant': }
@@ -18,7 +19,13 @@ class people::marzagao {
       'hg',
       'awscli',
       'ec2-api-tools',
+      'wget',
     ]:
+  }
+
+  package { 'GoogleAppEnginePython':
+    provider => 'appdmg',
+    source   => 'https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.17.dmg',
   }
 
   sublime_text_3::package { 'GoSublime':

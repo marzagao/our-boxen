@@ -70,4 +70,4 @@ github "virtualbox",     "1.0.13"
 github "appstore",     "0.0.6", :repo => "xdissent/puppet-appstore"
 github "evernote",     "2.0.7"
 github "sublime_text_3",     "1.0.3", :repo => "jozefizso/puppet-sublime_text_3"
-
+github "spotify",     "1.0.2"
