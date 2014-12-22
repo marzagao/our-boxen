@@ -8,7 +8,9 @@ class people::marzagao {
   include spotify
 
   include virtualbox  
-  class { 'vagrant': }
+  class { 'vagrant': 
+    version => '1.6.5'
+  }
   include vagrant_manager
 
   package {
