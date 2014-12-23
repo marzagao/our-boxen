@@ -18,7 +18,7 @@ class people::marzagao {
       'gpg',
       'git-crypt',
       'go',
-      'hg',
+      'mercurial',
       'awscli',
       'ec2-api-tools',
       'wget',
@@ -55,6 +55,10 @@ class people::marzagao {
   
   appstore::app { 'Slack':
     source => 'slack/id803453959',
+  }
+
+  appstore::app { 'Kindle':
+    source => 'kindle/id405399194',
   }
 
   dockutil::item { 'Add Chrome':
