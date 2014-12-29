@@ -9,7 +9,7 @@ class people::marzagao {
 
   include virtualbox  
   class { 'vagrant': 
-    version => '1.6.5'
+    version => '1.7.1'
   }
   include vagrant_manager
 
