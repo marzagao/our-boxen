@@ -11,7 +11,6 @@ class people::marzagao {
   class { 'vagrant': 
     version => '1.7.1'
   }
-  include vagrant_manager
 
   package {
     [
