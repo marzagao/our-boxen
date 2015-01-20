@@ -21,12 +21,8 @@ class people::marzagao {
       'awscli',
       'ec2-api-tools',
       'wget',
+      'google-app-engine',
     ]:
-  }
-
-  package { 'GoogleAppEnginePython':
-    provider => 'appdmg',
-    source   => 'https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-1.9.17.dmg',
   }
 
   sublime_text_3::package { 'GoSublime':
