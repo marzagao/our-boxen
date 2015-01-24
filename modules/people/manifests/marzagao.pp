@@ -6,6 +6,7 @@ class people::marzagao {
   include evernote
   include sublime_text_3
   include spotify
+  include skype
 
   include virtualbox  
   class { 'vagrant': 
