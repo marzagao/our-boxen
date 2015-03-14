@@ -10,7 +10,7 @@ class people::marzagao {
 
   include virtualbox  
   class { 'vagrant': 
-    version => '1.7.1'
+    version => '1.7.2'
   }
 
   package {
@@ -28,6 +28,12 @@ class people::marzagao {
 
   sublime_text_3::package { 'GoSublime':
     source => 'DisposaBoy/GoSublime'
+  }
+  sublime_text_3::package { 'SublimePuppet':
+    source => 'russCloak/SublimePuppet'
+  }
+  sublime_text_3::package { 'Cobalt2ColorScheme':
+    source => 'wesbos/cobalt2'
   }
 
   file { "/usr/local/bin":
