@@ -26,6 +26,16 @@ class people::marzagao {
     ]:
   }
 
+  class { 'ruby::global':
+    version => '2.2.2'
+  } 
+
+  ruby_gem { 'r10k for all rubies':
+    gem          => 'r10k',
+    version      => '~> 1.5.1',
+    ruby_version => '*',
+  }
+
   sublime_text_3::package { 'GoSublime':
     source => 'DisposaBoy/GoSublime'
   }
