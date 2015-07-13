@@ -8,9 +8,13 @@ class people::marzagao {
   include spotify
   include skype
 
-  include virtualbox  
+  class{ 'virtualbox':
+    version => '5.0.0',
+    patch_level => '101573',
+  }
+
   class { 'vagrant': 
-    version => '1.7.2'
+    version => '1.7.3'
   }
 
   package {
@@ -22,6 +26,7 @@ class people::marzagao {
       'ec2-api-tools',
       'wget',
       'google-app-engine',
+      'go',
     ]:
   }
 
