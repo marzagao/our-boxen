@@ -27,6 +27,7 @@ class people::marzagao {
       'wget',
       'google-app-engine',
       'go',
+      'redis',
     ]:
   }
 
@@ -48,6 +49,9 @@ class people::marzagao {
   }
   sublime_text_3::package { 'Cobalt2ColorScheme':
     source => 'wesbos/cobalt2'
+  }
+  sublime_text_3::package { 'Terraform.tmLanguage':
+    source => 'alexlouden/Terraform.tmLanguage'
   }
 
   file { "/usr/local/bin":
