@@ -28,6 +28,7 @@ class people::marzagao {
       'google-app-engine',
       'go',
       'redis',
+      'node',
     ]:
   }
 
